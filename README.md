@@ -115,9 +115,23 @@ NodePort service successfully exposed externally after updating Security Group t
 
 - Secure exposure of workloads
 
-## Future Improvements
 
-- Ingress Controller (NGINX)
+## Validation and Exposure
+### NodePort Test
+
+Nginx was exposed using a NodePort service and validated externally after opening the NodePort range (30000–32767) in the AWS Security Group.
+
+Ingress Test (ingress-nginx)
+
+Installed ingress-nginx controller and exposed it via NodePort (HTTP 31844).
+Validated external access:
+
+http://<worker_public_ip>:31844/
+
+Screenshots and proof outputs are available in docs/.
+
+
+## Future Improvements
 
 - Helm-based application deployment
 
